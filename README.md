@@ -2,29 +2,43 @@
 
 Projects made for my academic classes written in C
 
+I am the author of every file and wrote them by myself.
+
 They are in the process of translation from Polish.
 
 #### quadratic-equation.c
 
-Program czyta trzy liczby rzeczywiste a, b i c, a następnie rozwiązuje równanie kwadratowe a·x2 + b·x + c = 0.
-Program drukuje informację, że nie ma w zbiorze liczb rzeczywistych rozwiązania tego równania, albo przedstawiać rozwiązanie pojedyncze, gdy delta jest równa 0 albo podwójne, gdy delta jest dodatnia.
+The program reads 3 real numbers *a*,*b* and *c*, then computes quadratic equation a·x^2 + b·x + c = 0. It prints information whether there are no results in real numbers or one result when delta is 0 or two results when delta is positive.
 
 #### amount-in-cash.c
+
+The program reads the amount in złoty and groszy given as integer numbers. It prints this amount in the least number of bills and coins possible.
 
 Program czyta kwotę podaną w postaci całkowitej liczby złoty i całkowitej liczby groszy, a następnie drukuje w jaki sposób wypłacić ją jak najmniejszą liczbą banknotów i monet.
 
 #### arithmetic-mean.c
 
-Program czyta liczbę całkowitą n a następnie wczytuje n liczb rzeczywistych x1, x2, . . . , xn. Na koniec drukuje średnią arytmetyczną wczytanych wartości rzeczywistych.
+The program reads integer number *n*, then reads *n* of real numbers. As result, it prints the arithmetic mean of given values.
+
+Program czyta liczbę całkowitą *n*, a następnie wczytuje *n* liczb rzeczywistych. Na koniec drukuje średnią arytmetyczną wczytanych wartości rzeczywistych.
 
 #### euler.c
 
-Funkcja Eulera: τ(n) = |{(a,b) ∈ {1,...,n}2 : NWD(a,b) = 1}| wyznacza liczbę par liczb względnie pierwszych, gdzie obie liczby w parze są z zakresu 1,..., n.
+Euler function: τ(n) = |{(a,b) ∈ {1,...,n}^2 : NWD(a,b) = 1}| is a number of relatively prime pairs and both numbers in the pair are from boundary of 1 to n.
+The program prints in the following lines the *n* and *τ(n)* separeted by semicolon (CSV format).
+
+Funkcja Eulera: τ(n) = |{(a,b) ∈ {1,...,n}^2 : NWD(a,b) = 1}| wyznacza liczbę par liczb względnie pierwszych, gdzie obie liczby w parze są z zakresu 1,..., n.
 Program drukuje w kolejnych wierszach po dwie oddzielone średnikiem liczby n i τ(n), dla n = 1,...,1000 (CSV).
 
 #### match.c
 
-Funkcja match(char* wzorzec, char* łańcuch) ustala zgodność wzorca z łańcuchem. Znak ’?’ we wzorcu oznacza zgodność z dowolnym innym znakiem. Znak ’*’ oznacza zgodność z dowolnym, również pustym, ciągiem znaków w łańcuchu. Znak różny od ’?’ i ’*’ oznacza zgodność tylko z samym sobą.
+```c
+bool match(char* pattern, char* chain)
+```
+
+The function determine the compability of the pattern with a chain. Sign '*?*' in the patter means the compability with any other sign. Sign ’\*’ means the compability with any, even empty, series of signs in the chain. Other signs means compability only with itselves.
+
+Funkcja ustala zgodność wzorca z łańcuchem. Znak ’?’ we wzorcu oznacza zgodność z dowolnym innym znakiem. Znak ’\*’ oznacza zgodność z dowolnym, również pustym, ciągiem znaków w łańcuchu. Znak różny od ’?’ i ’\*’ oznacza zgodność tylko z samym sobą.
 
 #### mastermind.c
 

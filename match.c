@@ -1,11 +1,10 @@
 //
-//  wip_lab4
-//  Zadanie 1
-//  Porównywanie łańcucha znaków do wzorca
-//	'*' - dowolny łańcuch znaków (nawet pusty)
-//	'?' - dowolna litera
+//  The function determine the compability of the pattern with a chain.
+//	'*' - the compability with any, even empty, series of signs in the chain.
+//	'?' - the compability with any other sign.
+//	Other signs means compability only with itselves.
 //
-//  Autor: Patryk Barczak
+//  Author: Patryk Barczak
 
 #include <stdio.h>
 #include <stdbool.h>
@@ -13,33 +12,33 @@
 
 #define SIZE 256
 
-bool match(char* wzorzec, char* lancuch) {
-	int length = strlen(lancuch);
+bool match(char* pattern, char* chain) {
+	int length = strlen(chain);
 
-	if(*wzorzec == '*') {
-		char *nextWzorzec = wzorzec + 1;
+	if(*pattern == '*') {
+		char *nextPattern = pattern + 1;
 
 		for(int i = 0; i <= length; ++i) {
-			if(match(nextWzorzec, lancuch + i))
+			if(match(nextPattern, chain + i))
 				return true;
 		}
 		return false;
 	}
 
-	return(((*wzorzec == '\0') && (*lancuch == '\0')) || 
-		(((*wzorzec == *lancuch) || (*wzorzec == '?')) && match(wzorzec+1, lancuch+1)));
+	return(((*pattern == '\0') && (*chain == '\0')) || 
+		(((*pattern == *chain) || (*pattern == '?')) && match(pattern+1, chain+1)));
 }
 
 int main() {
-	char wzor[SIZE];
-	char lanc[SIZE];
+	char ptrn[SIZE];
+	char chn[SIZE];
 
-	printf("Podaj wzorzec: ");
-	fgets(wzor, sizeof(wzor), stdin);
-	printf("Podaj lancuch: ");
-	fgets(lanc, sizeof(lanc), stdin);
+	printf("Give a pattern: ");
+	fgets(ptrn, sizeof(ptrn), stdin);
+	printf("Podaj chain: ");
+	fgets(chn, sizeof(chn), stdin);
 
-	if(match(wzor, lanc))
+	if(match(ptrn, chn))
 		printf("OK\n");
 	else
 		printf("NIE OK\n");
