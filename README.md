@@ -1,10 +1,8 @@
 # c-academic-projects
 
-Projects made for my academic classes written in C
+Projects made for my academic classes in the first term. They are  written in C.
 
 I am the author of every file and wrote them by myself.
-
-They are in the process of translation from Polish.
 
 #### quadratic-equation.c
 
@@ -36,10 +34,10 @@ Program drukuje w kolejnych wierszach po dwie oddzielone średnikiem liczby n i
 bool match(char* pattern, char* chain)
 ```
 
-The function determine the compability of the pattern with a chain. Sign '*?*' in the patter means the compability with any other sign. Sign ’\*’ means the compability with any, even empty, series of signs in the chain. Other signs means compability only with itselves.
+The function determines the compability of the pattern with a chain. Sign '*?*' in the patter means the compability with any other sign. Sign ’\*’ means the compability with any, even empty, series of signs in the chain. Other signs means compability only with itselves.
 
 Funkcja ustala zgodność wzorca z łańcuchem. Znak ’?’ we wzorcu oznacza zgodność z dowolnym innym znakiem. Znak ’\*’ oznacza zgodność z dowolnym, również pustym, ciągiem znaków w łańcuchu. Znak różny od ’?’ i ’\*’ oznacza zgodność tylko z samym sobą.
 
 #### mastermind.c
 
-Mastermind game. The computer is a decoder. Please temporarily google for the rules.
+Mastermind game. The computer is a decoder. In a pill, pick up 4 digits from 1 to 6 in order and computer will try to figure them out.
